@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-deviece-width, initial-scale-1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>Texto de párrafo</p>
+        <!-- Comentario -->
+        
+        <script>
+            console.log("Hola Iker\nAdiós"); // Logs in the console the text between brackets
+            /* console.log("Hola Mundo"); // Logs in the console the text between brackets */
+            console.log(5);
+            console.log("5");
+            console.log("5 + 2");
+            console.log(5 + 2);
+            console.log(5 - 2);
+            console.log(5 * 2);
+            console.log(5 / 2);
+            console.log(5 ** 2);
+            console.log((2 + 3) * 2);
+            console.log(2 + (3 * 2));
+            console.log(2 + 3 * 2);
+
+            console.log("Hola mundo!");
+            console.log("Hola" + "mundo!");
+            console.log("Hola " + "mundo!");
+            console.log("Tengo 2 manzanas");
+            console.log("Tengo" + 2 + "manzanas.");
+            console.log("Tengo " + 2 + " manzanas.");
+            console.log("Tengo " + (2+3) + " manzanas.");
+
+            console.log("EXAMPLE");
+            let name;
+            name = "Mi nombre";
+            console.log(name);
+            let number;
+            number = 7;
+            console.log(number);
+            number = 2;
+            console.log(number + 1);
+            let apple;
+            apple = 3;
+            console.log("Tengo " + apple + " manzanas");
+
+            console.log("EXAMPLE");
+            let value = 5;
+            console.log(typeof(value));
+            value = 5.1;
+            console.log(typeof(value));
+            value = "Hola mundo";
+            console.log(typeof(value));
+
+            console.log("EXAMPLE 10");
+            let day;
+            day = parseInt("3");
+            console.log(day);
+            console.log(typeof(day));
+            let MonthDay;
+            MonthDay = "Monday" + day;
+            console.log(MonthDay);
+            console.log(typeof(MonthDay));
+
+            console.log("PROMPT EDAD");
+            // window.alert("Mensaje random")
+            let nombre = prompt("Escriba su nombre.");
+            console.log(nombre);
+            let EdadTexto = prompt("Indtroduzca su edad.");
+            console.log(typeof(EdadTexto));
+            let edad;
+            edad = parseInt(EdadTexto);
+            console.log(typeof(edad))
+            console.log("Hola " + nombre + ", tienes " + edad + " años.\nEl próximo año tendrás " + (edad + 1) + " años.");
+
+            console.log("PROMPT RECTÁNGULO");
+            let AltoTexto = prompt("Altura de un rectángulo");
+            alto = parseInt(AltoTexto);
+            console.log(typeof(alto) + ": " + alto );
+            let AnchoTexto = prompt("Ancho de un rectángulo");
+            ancho = parseInt(AnchoTexto);
+            console.log(typeof(ancho) + ": " + ancho);
+            console.log("El rectángulo tiene un área de " + (alto * ancho) / 2 + " centímetros.");
+        </script>
+    </body>
+</html>
