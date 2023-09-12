@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-deviece-width, initial-scale-1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Parte 04</h1>
+    <h2>FUNCIONES STRING</h2>
+    <p>Funciones para aprender a utilizar y a manejar las cadenas de texto con el fin de 
+        obtener información y manejar los datos.        
+    </p>
+
+    <p>El número de letras de un string: "x.lenght"</p>
+    <p>Crear una subcadena de un string: "x.substing(numero inicial, numero final opcional)" </p>
+    <p>Hacer minúsculas todos los caracteres de un string: "x.toLowerCase()"</p>
+    <p>Hacer mayúsculas todos los caracteres de un string: "x.toUpperCase()"</p>
+    <p>Conocer la presencia de un caracter o conjunto de caracteres en concreto. Si no lo/s 
+        encuentra devuelve "-1", sino la posicón del primer caracter: "x.indexOf(caracter o conjunte de caracteres)"</p>
+    <p>Reemplazar el primero de los caracteres o cojunto de caracteres de una cadena de 
+        texto: "x.replace(reemplazo, sustituto)"</p>
+    <p>Reemplazar todos los caracteres o conjunto de caracters de una cadena de texto: "x.replaceAll(reemplazo, sustituto)"</p>
+
+
+    <script>
+        let nombre = "Jasone";
+        console.log(nombre + "(" + typeof(nombre) + "): " + nombre.length)
+
+        let longitud = nombre.length;
+        console.log(longitud);                  // Output: 6
+
+        let subcadena = nombre.substring(2);
+        console.log(subcadena);                 // Output: "sone"
+
+        // 4.6:
+        let random6 = "Holacaracola67";
+        console.log(random6.substring(4, 10));
+
+        // 4.7
+        let recupera7 = random6.substring(4);
+        console.log(recupera7);
+
+        // 4.10
+        console.log(random6.toLowerCase());
+
+        // 4.11
+        console.log(random6.toUpperCase());
+
+        console.log(random6.indexOf(7));
+
+        console.log(random6.replace("a", "i"));
+        console.log(random6.replaceAll("a", 4));
+
+        // 4.16
+        let repaso1 = "caracteres";
+        let mitad = repaso1.substring(repaso1.length / 2);
+        console.log(mitad);
+        let mitadMayus = mitad.toUpperCase();
+        console.log(mitadMayus);
+        let resultado = repaso1.replace(mitad, mitadMayus);
+        console.log(resultado);
+
+        // 4.17
+        let repaso2 = prompt("Escribe una operación de suma de dos números.");
+        console.log(repaso2);
+        let numeros = (repaso2.replaceAll(" ", ""));
+        console.log(numeros);
+        result = (numeros.replace("+", " Y "));
+        console.log(result);
+        result2 = (result.toLowerCase());
+        console.log(result2);
+
+
+    </script>
+</body>

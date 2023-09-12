@@ -1,0 +1,484 @@
+<!-- VARIABLES BOOLEANAS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-deviece-width, initial-scale-1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Parte 03</h1>
+    <h2>VARAIBLES</h2>
+
+    <p>
+        "let", aquello con lo que definimos una variable (del tipo que sea), cuando la 
+        utilizamos, esa variable existe en una parte del programa. Parte que está delimitada 
+        por las llaves {} entre las que se ecuentra. Recordar que estas variables no pueden ser 
+        utilizadas hasta que no hayan sido definidas. 
+    </p>
+
+    <p>
+        Tipos de valores: cadenas de texto (strings), numéricos, booleanos (true o false)
+    </p>
+
+    <p>
+        Operadores relacionales: <, >, =, <=, >=, ==, !=, %(resto), *(elevado a)
+    </p>
+    
+    <p>
+        CONDICIONALES: Si la condicion establecida es cierta el codigo se ejecutará, sino no.
+    </p>
+
+    <p>
+        else if / switch: Los valores en switch tienen que coincidir exactamente, mientreas que
+        en un if-else if-else puedes crear rangos de valores. Mientras el else acepta valores que
+        no cumplen con las coindiciones previas, el default es muy similar, ejecutando el codigo en
+        caso de que ninguno de los valores anteriores se encuentre.
+    </p>
+
+    <p>
+        BUCLES:
+        - while: El codigo se ejecuta si cumple la condición.
+        - do while: El codigo se ejecuta al menos una vez, cumpla o no la condición.
+        - for: Para cuando sabemos cuantas veces queremos repetir el código y no necesitamos el 
+                valor de la variable(ámbito de variable*).
+    </p>
+
+    <!-- <script>    // 3.1 - Variables Booleanas
+        let test;
+        test = false;
+        console.log(test);
+        let message;
+        message = "La variable test contiene el valor " + test;
+        console.log(message)
+    </script> -->
+
+    <!-- <script>    // 3.2 - Operadores relacionales + booleanos
+        console.log("3 < 5 es " + (3 < 5));
+        console.log("5 < 3 es " + (5 < 3));
+        console.log("4 < 4 es " + (4 < 4));
+        console.log("4 <= 4 es " + (4 <= 4));
+        console.log("4 >= 4 es " + (4 >= 4));
+        console.log("5 >= 4 es " + (5 >= 4));
+        console.log("4 == 3 es " + (4 == 3));
+        console.log("4 != 3 es " + (4 != 3));
+        console.log("4 != 4 es " + (4 != 4));
+    </script> -->
+
+    <!-- <script>    // 3.2 - Operadores relacionales + booleanos
+                // 3.3 - Ejemplo de Programa
+        let answer = prompt("Escriba su edad por favor:");
+        // If not parseInt, type of age = undefined instead of number
+        age = parseInt(answer);
+        console.log("Eres mayor de edad: " + (age >= 18));
+        // age = (answer <= 18);
+        // console.log("Eres mayor de edad: " + (age));
+        console.log(typeof(age));
+    </script> -->
+        
+    <!-- <script>    // 3.4 - CONDICIONALES
+        if (3 < 5) {
+            console.log("3 es menor a 5.");
+        }
+        else {
+            console.log("3 es igual o mayor a 5.");
+        }
+
+        let respuesta = prompt("Escriba su edad porfavor:");
+        console.log(typeof(respuesta));     // string
+        edad = parseInt(respuesta);
+        console.log(typeof(edad));          // number
+        if (edad >= 18) {
+            console.log("Usted tiene " + edad + " años, por lo tanto es mayor de edad.");
+        }
+        else {
+            console.log("Usted tiene " + edad + " años, por lo tanto es menor de edad.");
+        }
+    </script> -->
+
+    <!-- <script>    // 3.5 - Ejemplo flojo, no lo hago (VIP / no VIP)
+                    // 3.6 - Programa del 3.3
+                    // 3.7 - Programa de "Adivina un numero entre el 1 y el 10"
+
+        let correct_answer = 5;
+        let tries = 3;
+        while (tries >= 1) {
+            let answer = parseInt(prompt("Adivina el número entre 1 y 10. Tienes " + tries + " intento/s."));
+            if (answer == correct_answer) {
+                console.log("¡Has acertado!");
+                break;
+            }
+            else {
+                tries -= 1
+                // console.log(tries);
+                if (tries == 1) {
+                    console.log("Respuesta incorrecta, te queda " + tries + " intento.");
+                }
+                else if (tries > 1) {
+                    console.log("Respuesta incorrecta, te quedan " + tries + " intentos.");
+                }
+            }
+            console.log("Respuesta incorrecta, no te quedan más intentos.");
+        }
+    </script> -->
+
+    <!-- <script>    // 3.8 - Else if (Ejemplo)
+        // We use this 5 console.log to show the user the options
+        console.log("Elige una opción.");   //  entre: Insertar dato(1), Editar dato(2), Eliminar dato(3) o Salir(4).
+        console.log("1- Insertar dato.");
+        console.log("2- Editar dato.");
+        console.log("3- Eliminar dato.");
+        console.log("4- Salir.");
+
+        let opcion = parseInt(prompt("Elige una opción")); // Creamos una variable de tipo entero
+        if (opcion == 1) // Si opcion es igual a uno
+        {
+            console.log("Elegiste insertar dato."); // Mostrar mensaje que indica que se eligió la primera opción
+        }
+        else if (opcion == 2) // Si opcion es igual a dos
+        {
+            console.log("Elegiste editar dato."); // Mostrar mensaje que indica que se eligió la segunda opción
+        }
+        else if (opcion == 3) // Si opcion es igual a tres
+        {
+            console.log("Elegiste eliminar dato."); // Mostrar mensaje que indica que se eligió la tercera opción
+        }
+        else if (opcion == 4) // Si opcion es igual a cuatro
+        {
+            console.log("Elegiste salir del programa."); // Mostrar mensaje que indica que se eligió la cuarta opción
+        }
+        else // Si opcion no es igual a ninguna de los valores anteriores (ni 1, 2, 3 ni 4)
+        {
+            console.log("Opción erronea"); // Indicar que no se ha elegido una opcion posible
+        }
+    </script> -->
+
+    <!-- <script>    // 3.9 - Switch (Ejemplo)
+        
+        console.log("Elige una opción.");   //  entre: Insertar dato(1), Editar dato(2), Eliminar dato(3) o Salir(4).
+        console.log("1- Insertar dato.");
+        console.log("2- Editar dato.");
+        console.log("3- Eliminar dato.");
+        console.log("4- Salir.");
+
+        let opcion = parseInt(prompt("Elige una opción")); // Creamos una variable de tipo entero
+
+        switch(opcion) {
+            case 1:
+                console.log("Elegiste insertar dato.");
+                break;
+            case 2:
+                console.log("Elegiste editar dato.");
+                break;
+            case 3:
+                console.log("Elegiste eliminar dato.");
+                break;
+            case 4:
+                console.log("Elegiste salir del programa.");
+                break;
+            default:
+                console.log("Opción erronea.");
+                break;
+        }
+    </script> -->
+
+    <!-- <script>    // 3.10 - BUCLES while (Ejemplo básico)
+        let x = 0;
+        while (x <= 10)
+        {
+            if (x == 9) 
+            {
+                break;
+            }
+            console.log(x);
+            x += 1;
+        }
+    </script> -->
+
+    <!-- <script>    // 3.11 - Ejemplo 3.7 con While:
+        let correct_answer = 5;
+        let tries = 3;
+        while (tries > 0)
+        {
+            let answer = parseInt(prompt("Adivina el número entre 1 y 10. Tienes " + tries + " intento/s."));
+            // if (tries > 1)
+            // {
+            //     let answer = parseInt(prompt("Adivina el número entre 1 y 10. Tienes " + tries + " intentos."));
+            // } else {
+            //     let answer = parseInt(prompt("Adivina el número entre 1 y 10. Tienes " + tries + " intento."));
+            // }
+
+            if (answer == correct_answer) {
+                console.log("¡Has acertado!");
+                break;
+            }
+
+            else
+            {
+                tries -= 1;
+                if (tries == 1) {
+                    console.log("Respuesta incorrecta, te queda " + tries + " intento.");
+                }
+                else if (tries > 1) {
+                    console.log("Respuesta incorrecta, te quedan " + tries + " intentos.");
+                }
+            }
+            console.log("Respuesta incorrecta, no te quedan más intentos.");
+        }
+    </script> -->
+
+    <!-- <script>    // 3.12 - BUCLES do While (ejecuta el codigo de "do" al menos una vez)
+        // Crea una variable de número entero en la que guardaremos el valor introducido por el usuario
+        let numero = parseInt(prompt("Introduce un número: ")); // Pide un número al usuario. Convierte lo que el usuario introduce a un número entero y lo guarda en la variable numero
+
+        while (numero != 0) // Mientras el valor de la variable numero no sea igual a 0, repetir el código entre { y }
+        {
+            console.log(numero); // Muestra el valor de la variable numero en pantalla
+            numero = parseInt(prompt("Introduce un número: ")); // Pide un número al usuario. Convierte lo que el usuario introduce a un número entero y lo guarda en la variable numero
+        }
+
+        do // Marca el inicio del código que se repetirá, pero al pasar por primera vez empieza a ejecutarlo sin ninguna condición
+        {
+            numero = parseInt(prompt("Introduce un número:")); // Pide un número al usuario. Convierte lo que el usuario introduce a un número entero y lo guarda en la variable numero
+            console.log(numero); // Muestra el valor de la variable numero en pantalla
+        } while (numero != 0); // Mientras la variable no sea 0, hace que el código se repita desde después del do hasta aquí
+
+    </script> -->
+
+    <!-- <script>    // 3.13 - Programa While
+        let number = 10;
+        while (number)
+        {
+            console.log(number);
+            number -= 1;
+            if (number == 0)
+            {
+                console.log("¡Despegue!");
+                break;
+            }
+        }
+    </script> -->
+
+    <!-- <script>    // 3.14 - BUCLES - for -> SINTAXIS: for(inicializar; condicion; cambio) {}
+        let number = 1;
+        while (number <= 5)
+        {
+            console.log("El número es " + number);
+            number += 1;
+        }
+        console.log("La variable 'number' sigue existiendo, teniendo un valor de " + number );
+
+        for (let n = 1; n <= 5; n += 1)
+        {
+            console.log("El valor de n es " + n + ".");
+        }
+        console.log("La variable 'i' deja de existir.");
+        console.log("El valor de la variable 'i' es: " + i);
+    </script> -->
+
+    <!-- <script>    // 3.15,16,17 - Ejemplos for + Operador resto
+        let numero = parseInt(prompt("Escriba un número cualquiera:"));
+        if (numero % 2 == 0)
+        {
+            console.log("Par");
+        }
+        else
+        {
+            console.log("Impar");
+        }
+
+        let resultado = "Multiplos de 6 del 1 al 100: ";
+        for (let i = 1; i <= 100; i += 1)
+        {
+            if (i % 6 == 0)
+            {
+                // console.log(i + " es múltiplo de 6");
+            resultado += (i + " ");
+            }
+        }
+        console.log(resultado)
+    </script> -->
+
+    <!-- <script>    // 3.18 - Ejemplo Baraja Española
+        let nombreCarta;
+        for (let palo = 1; palo <= 4; palo += 1)
+        {
+            for (let valor = 1; valor <= 10; valor += 1)
+            {
+                if (valor == 1) {
+                    nombreCarta = "As";
+                } else if (valor == 8) {
+                    nombreCarta = "Sota";
+                } else if (valor == 9) {
+                    nombreCarta = "Caballo";
+                } else if (valor == 10) {
+                    nombreCarta = "Rey";
+                } else {
+                    nombreCarta = valor;
+                }
+
+                nombreCarta += " de "
+
+                if (palo == 1)
+                {
+                nombreCarta += "Oros";
+                }
+                else if (palo == 2)
+                {
+                    nombreCarta += "Copas";
+                } 
+                else if (palo == 3)
+                {
+                    nombreCarta += "Espadas";
+                }
+                else if (palo == 4)
+                {
+                    nombreCarta += "Bastos";
+                }
+                
+                console.log(nombreCarta)
+
+                if (valor == 10) {
+                    console.log("");
+                }
+            }
+        }
+    </script> -->
+
+    <!-- <script>    // 3.18 - Programa Tablero
+        let lines = parseInt(prompt("¿Cuantas filas quieres que tenga la tabla?"))
+        // let lines = 5;
+        let rows = parseInt(prompt("¿Cuantas columnas quieres que tenga la tabla?"))
+        // let rows = 5;
+        let a = "0";
+        let b = "X";
+        let print = "";
+
+        let lineas = lines;
+
+        if ((typeof(rows) && typeof(lines)) == "number") {
+            console.log("Continue");
+            if (rows <= 0 || lines <= 0) {
+                console.log("Al menos tiene que haber una línea y una columna.");
+            }
+            else {
+                while (lines > 0) {
+                    // console.log("Fila " + line + ":")
+                    let columns = rows;
+
+                    while (columns > 0 && rows % 2 == 0) {
+                        // console.log("Columna (PARES)" + columns);
+                        print += (a + b)
+                        columns -= 2;
+                        if (columns == 0) {
+                            print += "\n";
+                            console.log(print);
+                        }
+                    }
+
+                    while (columns > 0 && rows % 2 != 0) {
+                        // console.log("Columna (IMPARES) " + columns);
+
+                        if (lines % 2 != 0) {
+                            print += a;
+                            columns -= 1;
+                            if (columns == 0) {
+                                print += "\n";
+                                // console.log(print);
+                            }
+                            else if (columns > 0) {
+                                print += b;
+                                columns -= 1;
+                            }
+                        }
+                        else if (lines % 2 == 0) {
+                            print += b;
+                            columns -= 1;
+                            if (columns == 0) {
+                                print += "\n";
+                                // console.log(print);
+                            }
+                            else if (columns > 0) {
+                                print += a;
+                                columns -= 1;
+                            }
+                        }
+
+                        if (columns == 0) {
+                            break;
+                        }
+                    }
+                    lines -= 1
+                }
+                console.log("Esta tabla tiene " + lineas + " línea/s y " + rows + " columna/s\n" + print)
+            }
+        }
+    </script> -->
+
+    <!-- <script>    // 3.18 - Programa Tablero
+        let lines = parseInt(prompt("¿Cuantas filas quieres que tenga la tabla?"))
+        let rows = parseInt(prompt("¿Cuantas columnas quieres que tenga la tabla?"))
+        let a = "0";
+        let b = "X";
+        let print = "";
+
+        let lineas = lines;
+
+        if ((typeof(rows) && typeof(lines)) == "number") {
+            console.log("Continue");
+            if (rows <= 0 || lines <= 0) {
+                console.log("Al menos tiene que haber una línea y una columna.");
+            }
+            else {
+                while (lines > 0) {
+                    let columns = rows;
+
+                    while (columns > 0 && rows % 2 == 0) {
+                        print += (a + b)
+                        columns -= 2;
+                        if (columns == 0) {
+                            print += "\n";
+                            console.log(print);
+                        }
+                    }
+
+                    while (columns > 0 && rows % 2 != 0) {
+
+                        if (lines % 2 != 0) {
+                            print += a;
+                            columns -= 1;
+                            if (columns == 0) {
+                                print += "\n";
+                            }
+                            else if (columns > 0) {
+                                print += b;
+                                columns -= 1;
+                            }
+                        }
+                        else if (lines % 2 == 0) {
+                            print += b;
+                            columns -= 1;
+                            if (columns == 0) {
+                                print += "\n";
+                            }
+                            else if (columns > 0) {
+                                print += a;
+                                columns -= 1;
+                            }
+                        }
+
+                        if (columns == 0) {
+                            break;
+                        }
+                    }
+                    lines -= 1
+                }
+                console.log("Esta tabla tiene " + lineas + " línea/s y " + rows + " columna/s\n" + print)
+            }
+        }
+    </script> -->
+
+</body>
