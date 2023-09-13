@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-deviece-width, initial-scale-1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Parte 5</h1>
+    <h2>Arrays</h2>
+    <h4>Los arrays por así decirlo son colecciones de variables o valores en los que se pueden guardar
+        numeros, strings, booleanos...
+    </h4>
+
+    <script> // INTRO: Definir un array y acceder a un array
+        let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        let enero = meses[0];
+        console.log(enero);
+        console.log(meses[0]);
+
+        // 5.2 - Asignar valores:
+        let notasAlumnos = [];
+
+        let posicion0 = notasAlumnos[0];
+        let posicion1 = notasAlumnos[1];
+        let posicion2 = notasAlumnos[2];
+        console.log(posicion0);
+        console.log(posicion1);
+        console.log(posicion2);
+
+        notasAlumnos[0] = 5;
+        notasAlumnos[1] = 3;
+        notasAlumnos[2] = 1;
+        console.log(notasAlumnos[0]);
+        console.log(notasAlumnos[1]);
+        console.log(notasAlumnos[2]);
+
+        // 5.3 - Modificar los valores de un array:
+        let notas = [5, 8, 10];
+        console.log(notas);
+        notas[2] = 6;
+        console.log(notas[2]);
+        console.log(notas);
+
+        // 5.4 - Recorrer un array:
+        let animales = ["perro", "lobo", "gato", "tiburon", "rana"];
+        // for (i = 0; i < 5; i += 1) {                                 // Mejorable
+        for (i = 0; i < (animales.length); i += 1) {                    // Mejor
+            console.log(animales[i]);
+        }
+
+        // Ejercicios de repaso:
+        // - 1:
+
+            // let array1 = [];
+            // for (i = 0; i < 3; i += 1) {
+            //     let pos = prompt("Escriba un string:");
+            //     array1.push(pos);
+            // }
+            // console.log(array1);
+
+        // - 2:
+
+            // for (i = 20; i > 10; i--) {
+                // console.log(i);
+            // }
+
+        // - 3:
+
+            // let mes = prompt("Selecciona un mes introduciendo un número del 1 al 12:");
+            // console.log(meses[mes-1]);
+
+        // - 4:
+
+                // let NumbersArray = [1,2,3,4,3,8];
+                // let suma = 0;
+                // for (i = 0; i < NumbersArray.length; i++) {
+                //     suma += NumbersArray[i];
+                // }
+                // console.log(suma/NumbersArray.length);
+
+        // - 5:
+
+                // let array5 = {0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0};
+                // console.log(typeof(array5));
+                // console.log("PRUEBAS");
+                // console.log((array5));
+                // console.log(Object.keys(array5));
+                // randomKey = Object.keys(array5)[5];
+                // console.log(randomKey);
+
+                // console.log(Object.values(array5)[5]);
+                // console.log(Object.values(array5));
+                // randomValue = Object.values(array5)[5] + 1;
+                // console.log(randomValue);
+
+                // Object.values(array5)[5] = Object.values(array5)[5] + 1;
+                // console.log(array5);
+
+
+                let array5 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                // 7, 7, 7, 5, 6, 5, 9, 9, 10, -1
+                console.log("PROGRAMA");
+
+                for (i = 0; i < 11; i++) {
+                    let digito = prompt("Escribe un número de entre el 0 y el 10, ambos incluidos");
+                    if (digito > 10) {
+                        console.log("Numero incorrecto.");
+                    }
+                    else if (digito < 0) {
+                        console.log(array5);
+                    }
+                    else {
+                        array5[digito] = array5[digito] + 1;
+                        console.log(array5);
+                        // Object.values(array5)[digito] = Object.values(array5)[digito] + 1;
+                        // Object.values(array5)[Object.keys(array5)[digito]] = Object.values(array5)[Object.keys(array5)[digito]] + 1;
+                    }
+                }
+                console.log(array5);
+
+
+</script>
+
+</body>
