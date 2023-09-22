@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="funciones">
+        <div id="intro">
+            <h1>Funciones en JavaScript</h1>
+            <p>
+                A la que se vayan a utilizar de forma repetitiva las mismas instrucciones es conventiente 
+                utilizar funciones para <b>aligerar el código</b> y/o <b>facilitar la modificación de estas 
+                instrucciones</b>.
+            </p>
+            <p>
+                Las funciones son basicaemnte un conjunto de instrucciones agrupadas para realizar una tarea 
+                concreta y que se puede reutilizar fácilmente.
+            </p>
+            <p>
+                Sintaxis de una función: <b>function <em>nombFunc(param/)</em></b> {...} <br>
+                El <b><em>nombFunc</em></b> se utiliza para llamar a la función cuando sea necesario, del 
+                mismo modo que se les llama a las variables a lo largo del código.
+            </p>    
+        </div>
+
+        <div id="argumentos">
+            <h2>Argumentos</h2>
+            <p>
+                Las funciones más sencilas no necesitan información adicional(param/arg) para dar resultados.
+                No obstante, la mayoría de las funciones si las necesitan puesto que cuanto más se avanza en 
+                el aprendizaje del lenguaje, más complejas se vuelven las funciones, y por consiguente se 
+                utilizarán más.
+            </p>
+            <p>
+                Cuando haya que llamar a una función con parámetros, se la llamará con el nombre de la función 
+                y el o los argumentos entre paréntesis, seguido de un coma entre cada uno de ellos. Para saber 
+                si serán uno o varios argumentos, la función lo indicará en su sintaxis, además del nombre de 
+                cada uno.
+            </p>
+            <p>
+               Ejemplo de funcion con argumentos <b>03</b>. <br><br> Datos importantes sobre los argumentos:
+            </p>
+            <ul>
+                <li>Normalmente se utilizan variables para pasar datos a la función, pero también se pueden 
+                    introducir datos directamente</li>
+                <li>El <b>número de argumentos</b> debe ser el mismo numero que los indicado en la función, sin 
+                    embargo, si se pasan más o menos argumentos <b>no muestrar error</b> alguno.</li>
+                <li>El <b>orden de los argumentos</b> es fundamental, dado que el primer dato corresponderá al valor
+                    del primer argumento, y así sucesivamente.</li>
+                <li>El número de argumentos a utlizar puede ser ilimitado, pero se podría complicar en exceso 
+                    la llamada a la función (de forma innecesaria en muchas ocasiones)</li>
+                <li>El <b>nombre de los argumentos de la función</b> no tiene porque coincidir con el nombre de 
+                    los argumentos que se le pasan.</li>
+            </ul>
+            <p>Ejemplo de funcion con argumentos <b>04</b>.</p>
+            <p>Ejemplo de funcion con argumentos <b>05</b>.</p>
+            <p>
+                El <b>resultado de la función</b> puede ser expuesto(console.log, alert) al final de la función 
+                o bien <b>devuelto</b> a una variable que la llame para poder ser expuesta o utilizarse a lo 
+                largo del programa. Solo necesitaremos "<b>return</b> <em>nombreVariableADevolver</em>;" para 
+                devolver el valor y finalizar la ejecución de la función.
+            </p>
+        </div>
+
+        <div id="dom">
+            <h2>Métodos del DOM</h2>
+            <p>
+                A lo largo del precurso se han utilizado en multitud de ocasiones "<b>alert()</b>", 
+                "<b>console.log()</b>", "<b>document.get...()</b>", "<b>etc</b>". Todos estos son 
+                <b>métodos</b>, <em>funciones de una clase</em>, que no vienen dados cuando usamos 
+                JavaScript. <br><br> 
+                Ahora, uno de los métodos que vamos a utilizar es <b>addEventListener</b>, y de paso 
+                otro tipo de funciones como son las <b>funciones anónimas</b>.
+            </p>
+            <h3>addEventListener</h3>
+            <p>
+                Este métodos se utiliza para <b>registrar eventos que suceden en la web</b>, como 
+                cuando alguien hace "click" en un "button" o selecciona algo de un "select", por 
+                ejemplo, se puede hacer que sucedan cosas. <br><br>
+                Al ser <b>un método acepta argumentos</b>. Nosotros le pasaremos dos: por un lado, 
+                el evento al que va a reaccionar (cuando se haga "click" en el elemento "button") y 
+                la instrucción de código a ejecutar cuando suceda ese evento por otro lado.
+            </p>
+            <div id="ejemplo-ael-07">
+                <p>Ejemplo de addEventListener_num I <b>- 07</b>.</p>
+                <p id="num7">1</p>
+                <button id="btn7">Click me</button>
+            </div>
+            <div id="ejemplo-ael-08">
+                <p>Ejemplo de addEventListenter_num II <b>- 08</b></p>
+                <p id="num8">1</p>
+                <button id="btn8">Click me</button>
+            </div>
+            <div id="ejemplo-funcion-anonima-09">
+                <p>Ejemplo de <b>función anónima</b> + addEventListenter III <b>- 09</b></p>
+                <p id="num9">1</p>
+                <button id="btn9">Click me</button>
+            </div>
+            <div id="dom-1">
+                <h4>DOM.1 - +number</h4>
+            </div>
+            <div id="dom-2">
+                <h4>DOM.2 - false/true</h4>
+            </div>
+            <div id="dom-3">
+                <h4>DOM.3 - Carta Magic</h4>
+                <div id="dom-3-magic"></div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script type="" src="parte_10_script.js"></script>
+</body>
+</html>

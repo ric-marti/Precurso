@@ -1,0 +1,8 @@
+#referenciar-elementos-ejemplo {
+    /* display: inline-block; */
+    background-color: gray;
+}
+#title {
+    display: flex;
+    justify-content: center;
+}

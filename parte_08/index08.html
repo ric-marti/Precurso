@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles08.css">
+    <title>TÍTULO DE LA PÁGINA</title>
+    <!-- <sub>subtítulo</sub> -->           <!-- No tiene sentido poner nada aquí-->
+</head>
+<body>
+    <!--    
+        - Utilizarmos propiedades que ya hemos visto dándo estilos a elementos como "ul", "li" y "a" bajo un 
+        "div" que hará de cabecera.
+        - Utilizaremos el selector universal (*{}) dónde se introducirán las propiedades CSS. Este selector 
+        será aplicado a todos los elementos HTML. 
+        - Le daremos margin y pading 0 para que las cajas no tengan espacios dentro ni fuera, 
+        para poder establecer los tamaños que cada uno desee.
+        - Fíjate en como se usan las propiedades CSS ya que para el siguiente ejercicio serán vitales. 
+    -->
+    <div id="header">
+        <div>
+            <h2 id="header-title">TÍTULO DE LA PÁGINA</h2>
+            <h3 id="header-subtitle">subtítulo</h3>
+        </div>
+        
+        <div id="websites">
+            <a href="https://google.com">Google</a>
+            <a href="https://yahoo.com">Yahoo</a>
+            <a href="https://duckduckgo.com">Duck Duck Go</a>    
+        </div>
+
+    </div>
+
+    <!--
+        - Como agrupar diferentes elemtntos utilizando flex-direction, nuevos valores para el 
+        justify-content... Nuevos pasos para manejar mejor CSS.
+        - Deben mantenerse las 3 columnas aunque cambiemos el tamaño de la pantalla.
+    -->
+    <div id="content">
+
+        <div id="intros">
+            <!-- <div class="margin"> -->
+                <div class="title">
+                    <h2 id="intros-title">INTROS</h2>
+                </div>
+            <!-- </div> -->
+
+            <div id="intros-articles">
+                <div class="intros-article" id="bloque1">
+                    <h2 class="subtitle">Bloque 1</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam 
+                        nam quisquam soluta itaque aliquam natus blanditiis voluptatem 
+                        nulla sint.
+                    </p>
+                </div>
+                <div class="intros-article" id="bloque2">
+                    <h2 class="subtitle">Bloque 2</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam 
+                        nam quisquam soluta itaque aliquam natus blanditiis voluptatem 
+                        nulla sint.
+                    </p>
+                </div>
+                <div class="intros-article" id="bloque3">
+                    <h2 class="subtitle">Bloque 3</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam 
+                        nam quisquam soluta itaque aliquam natus blanditiis voluptatem 
+                        nulla sint.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="news">
+
+            <!-- <div class="margin">
+                <div class="title" >
+                </div>    
+            </div> -->
+            <div class="title">
+                <h2 id="news-title" class="title">NOTICIAS</h2>
+            </div>
+
+            
+            <div id="news-articles">
+                
+                <div class="news-article" id="bloque4">
+                    <h2 class="subtitle">Bloque 4</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam 
+                        nam quisquam soluta itaque aliquam natus blanditiis voluptatem 
+                        nulla sint.
+                    </p>
+                </div>
+                <div class="news-article" id="bloque5">
+                    <h2 class="subtitle">Bloque 5</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam 
+                        nam quisquam soluta itaque aliquam natus blanditiis voluptatem 
+                        nulla sint.
+                    </p>
+                </div>
+                <div class="news-article" id="bloque6">
+                    <h2 class="subtitle">Bloque 6</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam 
+                        nam quisquam soluta itaque aliquam natus blanditiis voluptatem 
+                        nulla sint.
+                    </p>
+                </div>
+                <div class="news-article" id="bloque7">
+                    <h2 class="subtitle">Bloque 7</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam 
+                        nam quisquam soluta itaque aliquam natus blanditiis voluptatem 
+                        nulla sint.
+                    </p>
+
+                </div>    
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+

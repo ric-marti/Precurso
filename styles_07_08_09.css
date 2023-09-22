@@ -1,0 +1,53 @@
+#example_id {
+    color: red;
+}
+
+.example_class {
+    color: blue;
+}
+
+#js-logo {
+    padding: 10px;
+    margin: 20px;
+}
+#js-logo2 {
+    width: 500px;  /* Al modificar una medida de entre ancho o altura la otra se modifica proporcionalmente */
+}
+
+
+#html-logo {
+    padding: 60px;
+    margin: 50px;
+}
+#html-logo2 {
+    height: 300px;  /* Al modificar una medida de entre ancho o altura la otra se modifica proporcionalmente */
+}
+
+/* 8.4.1 / 8.4 - Example with and without flexbox */
+#with-flexbox {
+    display:flex;
+}
+
+/* Example giving direction to elements, justifying the content and aligning items with flexbox.*/
+#flex-dir-justify-content-align-item {
+    display: flex;              /* 8.4.1 / 8.4 */
+    flex-direction: column;     /* 8.4.2 / 8.5 */
+    height: 500px;
+    width: 100%;
+    justify-content: center;    /* 8.4.3 / 8.6 */
+    align-items: center;        /* 8.4.4 / 8.7 */
+    border-style: double ;
+}
+
+/* -------------------------------------------------------------------------- */
+
+#java-script {
+    display: flex;
+    justify-content: center;
+    /* background-color: #fff23A; */
+}
+#titulo-java-script {
+    padding: 10px;
+    background-color: #fff23A;
+    border-radius: 12px;
+}

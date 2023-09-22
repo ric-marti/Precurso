@@ -1,0 +1,520 @@
+<!-- Intro a html, css y js -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta name="viewport" content="width-deviece-width, initial-scale-1.0">
+    <link rel="stylesheet" href="styles_07_08_09.css">     <!-- Link al archivo css -->    
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="cabecera">
+        <h1>Intro a html, css y js</h1>
+        <p>En esta parte se veran las diferencias principales entre html, css y js, nos iniciaremos en 
+            la maquetacion web (html + css) y acabaremos dandole funcionalidad con js, manejando lo que 
+            se conoce como el DOM (Document Object Model).
+        </p>
+    </div>
+
+    <div id="Cuerpo (HTML)">
+        <h2>HTML</h2>
+        <p>
+            HTML (Hyper Text Markup Languaje o Lenguaje de marcasa de Hiper Texto) es un lenguaje de 
+            marcado cuya funcionalidad es indicarle al navegador web el tipo de elemento que está en la 
+            estructura de una página web. Es el componente más basico de una web, la estrucura web. 
+            Define la forma y lugar de los diferentes componentes de una página web, como el texto, las 
+            imágenes, cabezera, links, etc. Algo asi como los cimientos de una casa, una especie de 
+            hormigón moldeable. O de otro modo, el esqueleto humano.
+        </p>
+
+        <h3>Headers(Cabeceras):</h3>    
+        <p>
+            Para títulos y subtítulos (h1-h6). h1, h2, h3 son las más utilizadas.
+        </p>
+
+        <h1>Cabecera 1: Título</h1> 
+        <p>A diferencia del resto, solo puede utilizarse una vez por página (SEO)</p>
+
+        <h2>Cabecera 2: Subtítulo</h2>
+        <h3>Cabecera 3</h3>
+        <h4>Cabecera 4</h4>
+        <h5>Cabecera 5</h5>
+        <h6>Cabecera 6</h6>
+
+        <h3>Etiquetas: strong/b - em/i</h3>
+        <p>
+            "strong" y "b" tienen la misma utilidad, <strong>destacar(strong)</strong> el texto 
+            poniéndolo en <b>negrita(b)</b>. La diferencia entre ambas es simplemente la semántica, ya que 
+            <b>b</b> proviene de <b>bold</b> y <strong>strong</strong> significa <strong>fuerte</strong>.
+        </p>
+        <p>
+            "em" e "i", al igual que las dos previas, tienen la misma utilidad pero provienen de diferentes 
+            semánticas. <em>em(em)</em> vien de la palabra <em>emphasis(énfasis)</em>, mientras que <i>i(i)</i> 
+            es de <i>italic</i>. Recomiendan utilizar <b><em>em</em></b> antes que <i>i</i>.
+        </p>
+
+        <h3>Enlaces/Links: "a"</h3>
+        <p>
+            Se escriben bajo la etiquta "a" y llevan atributos. Un <b>atributo</b> es una propiedad que un 
+            componente puede manejar y que en ocasiones necesita para poder funcionar bien. Estos siempre se 
+            escriben dentro de la etiqueta de apertura, normalmente como <b>clave = "valor"</b>. En el caso de 
+            los <b>enlaces</b>, basta con poner las etiquetas de apertura y cierre más el texto en el medio. 
+            Además, necesitamos indicarle la <b>dirección</b> a la que nos va a redirigir tras clickar en la 
+            <b>"a"</b>. Para ello la etiqueta "a" posee un abributo llamado <b>href</b> (<b>H</b>ypertext 
+            <b>ref</b>erence) en el que debemos incluir la <b>ruta</b> (direccion URL) que queremos usar. 
+            Como por ejemplo <a href="https://google.com">este enlace</a> que te lleva al buscador 
+            <a href="https://google.com"><b>Google</b></a>. Por cierto, esta es una <b>ruta absoluta</b>, es 
+            decir, necesita toda la dirección para que el enlace funcione bien.
+        </p>
+        <p>
+            Al poner <b>"este enlace"</b> y <b>"Google"</b> dentro de la etiqueta <b>"a"</b> con el <b>atributo 
+            "href"</b> han cambiado de color, de estilo. Esto se debe a que hay ciertos elementos, como este, 
+            que tienen sus propios estilos al hacer click.
+        </p>
+        <p>
+            He aquí otro ejemplo de <a href="./parte_06_TerimalWindows.html">enlace</a>, pero esta vez a una 
+            <b>página de la misma carpeta</b> que en la que estamos escribiendo los apuntes. Esta, en cambio, 
+            es una <b>ruta relativa</b>, es decir, no necesitamos toda la ruta de carpetas para llegar al 
+            archivo.
+        </p>
+
+        <h3>Imágenes: "img"</h3>
+        <p>
+            Las imágenes son un archivo diferente del HTML, por lo que habrá que indicar al navegador que 
+            aceda a un archivo, la imagen, y lo carge. A diferencia de los <b>links</b>, que se enlazan con 
+            <b>href</b>, las <b>imágenes</b> se enlazan con <b>src</b> (<b>s</b>ou<b>rc</b>e, origen en inglés).
+            La imagen es parte del contenido (HTML) y no decorativa (CSS).
+        </p>
+        <p>
+            Las imágenes tienen el atributo <b>alt</b> (texto alterno) que se muestra cuando la imagen no puede 
+            cargarse, pero que también sirve para los lectores de pantallas. Se le puede añadir los atributos 
+            <b>width</b> (ancho) y <b>height</b> (alto) para determinar su tamaño, pero debe/es mejor hacerse 
+            con CSS. Del mismo modo que con los enlaces, se puede marcar su origen de modo absoluto o relativo.
+        </p>
+        <p>Esta es una imagen de origen relativo:</p>
+        <img src="./el_lunes_sigo.jpg" alt="meme">
+        <p>Esta otra es una imagen de origen absoluto:</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Coat_types_3.jpg/220px-Coat_types_3.jpg" 
+            alt="Varios perros">
+
+        <h3>Listas: "ol", "ul" y "li"</h3>
+        <p>
+            La etiqueta <b>ol</b> (<b>O</b>rdered <b>l</b>ist) define una lista de <b>elementos</b> que se 
+            mostraran <b>enumerados</b> (y puede que ordenados), y <b>ul</b> (<b>U</b>nordered <b>l</b>ist) 
+            viene a ser lo contrario, un lista de <b>elementos sin orden alguno</b>. La etiqueta <b>li</b> 
+            (<b>li</b>st) viene a ser cada elemento de la lista. Veamos unos ejemplos.
+        </p>
+        <ol>
+            <li>Primero</li>
+            <li>Segundo</li>
+            <li>Tercero</li>
+            <li>Cuarto</li>
+            <li>Quinto</li>
+        </ol>
+        <ul>
+            <li>Audi</li>
+            <li>BMW</li>
+            <li>Porche</li>
+        </ul>
+        <p>
+            Elementos enumerados o no, se utilian segun el contenido a mostrar. Para los ingredientes de una 
+            receta se utilizaría <b>ul</b>, y para los pasos a seguir <b>ol</b>.
+        </p>
+        <p>Dentro de cada etiqueta se pueden meter más etiquetas, ya sean títulos, enlaces, etc.</p>
+
+        <h3>Block / Inline elements</h3>
+        <p>
+            Los <b>elementos que ocupan un bloque de sección</b> en una página web se denominan <b>block 
+            elements</b>, como <b>h1</b> o <b>p</b>. Otros, en cambio, los que no ocupan todo un bloque 
+            horizontal se denominan <b>inline blocks</b>, como son <b>a</b>, <b>img</b>, <b>strong/b</b> o 
+            <b>em/i</b>.
+        </p>
+        <h4>Ejemplo claro para mostrarlo (se utiliza css de una forma incorrecta, pero válida para un ejemplo 
+            simple y visual):</h4>
+        
+            <h1 style="border: 3px solid black">Esto es un título (block element)</h1>
+            <p style="border: 3px solid red">
+                Y esto un párrafo. Son Block Elements estos dos ejemplos porque ocupan
+                todo el espacio horizontal de la web.
+            </p>
+            <p style="border: 3px solid green">
+                Si escribo algo siempre va a ubicarse debajo del elemento anterior, aunque
+                parezca que exista espacio a su derecha.
+            </p>
+
+            <a style="border: 3px solid blue" href="http://www.github.com/">Esto es en línea</a>
+            <img 
+                style="border: 3px solid purple"
+                src="./el_lunes_sigo.jpg"
+                alt="si si, el lunes"
+            />
+            <a style="border: 3px solid darkcyan" href="http://www.google.com/">
+                Porque se pone a la derecha del último elemento ya que tiene espacio</a>
+
+        <h3>Divisores: "div"</h3>
+        <p>
+            Hasta ahora los todos los elementos los hemos metido de forma suelta en el <b>body</b> directamente, 
+            en <b>toda la página</b> web visible para el usuario. La realidad es que esos elementos deben 
+            agruparse en dentro una etiqueta <b>div</b> (<b>div</b>ision) que separamos del resto, que es una 
+            etiqueta de bloque.
+        </p>
+        <p>
+            Tener varios elementos agrupados bajo la etiqueta <b>div</b>, se podrán <b>formatear</b> () todos 
+            al mismo tiempo. También es una forma de distribuir las diversas secciones de una pagina web (cabe
+            cera/menú, cuerpo/sección pricipal, footer/pie de página, etc). Veamoslo con un ejemplo:
+        </p>
+        <div><h1>Título en la cabecera</h1></div>
+        <div><p>Párrafo en la sección principal</p></div>
+        <div><h5>Contacto en el pie de página</h5></div>
+        <p>
+            Cada <b>div</b> puesto así de simple cumple su función, pero para la "maquina" que lee HTML hay 
+            tres divs iguales y cada uno contiene cosas diferentes. ¿Cómo podría hacer para <b>referirse a 
+            cada uno de ellos por separado</b> ? Para eso hay <b>dos atributos</b> que son <b>compartidos por 
+            todas las etiquetas HTML: id</b> y <b>class</b>
+        </p>
+        <div>
+            <h4>id</h4>
+            <p>
+                Identifica el elemento con un nombre específico, no pudiendo haber dos elementos con el mismo 
+                id, ya que para eso está el atributo <b>class</b>. Ejemplo de cabecera: <b>div id="cabecera"
+                -contenido-div</b>. Especificarle un id a un elemento nos sirve para poder acceder a este con 
+                CSS para modificar su apariencia o como método de navegación interna, puesto que la <b>a</b> 
+                también sirve para movernos a diferentes secciones de la misma página en la que estamos. A la 
+                hora de utilizar <b>a</b>, hay que incluir un <b>#</b> (hashtag/almohadilla) en el atributo <b>
+                href</b> de <b>a</b> para que referencar al elemento HTML correctamente.
+            </p>
+            <p>Si clickas <a href="#cabecera">aquí</a> te llevará a la cabecera.</p>
+        </div>
+
+        <div id="DOM"><h2>El DOM (Document Object Model/Objeto Documento Modelo)</h2>
+            <p>
+                El DOM es el plano de nuestra web. Es el <b>mapa</b> que crea el navegador cuando abre nuestra 
+                página para <b>saber qué elementos existen en ella</b>, cuál es su <b>organización</b> y qué 
+                <b>atributos</b> poseen. Gracias a ello puede mostrar correctamente en el navegador nuestra 
+                página con todos los detalles que le habíamos dado. Podéis verlo en el navegador, a través del 
+                <b>inspector</b> del propio navegador. Buscad en la barra superior donde dice <b>Elements</b>. 
+                Ahí veréis lo que habéis estado haciendo (siguiente imagen).
+            </p>
+            <!-- <img src="" alt=""> -->
+        </div>
+    </div>
+
+    <div id="Cuerpo (CSS)">
+        <h2>CSS</h2>
+        <div id="Intro CSS">
+            <p>
+                CSS (Cascade StyleSheet u Hoja de Estilos en Cascada) es tambien un lenguaje de marcado y se 
+                encarga de dar los atributos visuales a una página web (marcando o no la diferencia) tales como 
+                el color, las imágenes, formas, bordes o tipos de letra. Fue creado para controlar el aspecto o 
+                presentación de los documentos electrónicos definidos con HTML y XHTML. CSS es la mejor forma de 
+                separar los contenidos y su presentación y es imprescindible para crear páginas web complejas.
+            </p>
+            <p>
+                Separar la definicón de los contenidos y de su aspecto presenta numerosas ventajas, ya que obliga 
+                a crear documentos HTML/XHTML bien definidos y con significado completo (también llamados "documentos 
+                semánticos"). Además, <b>mejora la accesibilidad</b> del documento, <b>reduce la complejidad de su 
+                mantenimiento</b> y <b>permite visualizar el mismo documento en infinidad de dispositivos 
+                diferentes</b>.
+            </p>
+            <p>
+                Al crear una página web pimero se utiliza HTML/XHTML para marcar los contenidos, es decir, para 
+                designar la función de cada elemento dentro de la página: párrafo(p), titular(h), texto 
+                destacado(b), tabla(t), lista de elementos(ol/ul + li), etc. Después se utiliza CSS para definir el 
+                aspecto de cada elemento: color, tamaño, tipografía, separaciones (horizontal y vertical) entre 
+                elementos, posición de cada elemento dentro de la página, etc.
+            </p>
+            <p>
+                CSS se puede usar de varias formas, ya sea mediante <b>estilos en línea</b> (no recomendado por 
+                la limpieza del código) o mediante <b>archivo CSS</b>.
+            </p>
+        </div>
+
+
+        <div id="Concepto básicos CSS">
+            <div id="Estilos en línea"><h3>Estilos en línea</h3>    <!-- 8.0 - Estilos en línea--> 
+                <p>
+                    Este tipo de elemenos son fáciles de identificar ya que la propiedad style destaca dentro de 
+                    la etiqueta de apertura (en este caso "p"), pero si uno quiere que todos los párrafos tengan 
+                    un color y tamaño determinado y el día de mañana hay que cambiarlo... Tirarás mucho tiempo a 
+                    la basura haciendo cambios uno por uno. Es por eso que <b>los estilos en línea se usan en 
+                    momentos muy puntuales</b>.
+                </p>
+                <p style="color: red; font-size: 20px">Hace tiempo que no hacia esto</p>
+                <p style="color: red; font-size: 16px">¿Qué tal estás?</p>
+            </div>
+
+            <div id="Sintaxis">
+                <h3>Sintaxis</h3>      <!-- 8.1 - Sintaxis -->
+                <p>
+                    Los archivos CSS tienen la terminación archivo<b>.css</b> y para usarlos se necesita poner 
+                    dentro de la <b>etiqueta head</b> del HTML un <b>elemento link</b> para asociar o linkear 
+                    ambos archivos, el .css con el .html: <b>link rel="stylesheet" href="archivo.css"</b>
+                </p>
+                <p>Hay tres formas principales de establecer los estilos con los que definir los elementos HTML:</p>
+                <ul>
+                    <li><b>Referenciar las etiquetas</b> (que sean todas iguales): 
+                        <b>Sintaxis:</b> <em>nombre de la etiqueta(p,h3,li...) {propiedades a modificar(color, font-size...): valores(red, 20px...)}</em></li>
+                    <li>Utilizando la <b>propiedad id</b>: 
+                        <b>Sintaxis:</b> <em>nombre del id{propiedades a modificar(color, font-size...): valores(red, 20px...)}</em></li>
+                    <li>Utilizando el <b>atributo class</b>, agrupando varios y diversos elementos para darles un estilo en 
+                        particular.<b> Sintaxis:</b> <em>nombre del atributo class{propiedades a modificar(color, font-size...): 
+                        valores(red, 20px...)}</em>. class se utiliza cuando queremos agrupar varios.</li>
+                </ul>
+            </div>
+                
+
+            <div id="Especificidad y su Jerarquía">
+                <h4>Especificidad y su Jerarquía</h4>    <!-- 8.2 -->
+                <p>
+                    Qué estilos se aplicarían si se usasen los tres (o cuatro) tipos de sintaxis de forma simultánea?
+                    La <b>especifidad</b> es la manera mediante la que los navegadores deciden qué valores de una 
+                    propiedad CSS son más relevantes para un elemento, y por lo tanto, la que en base a las regras 
+                    de coincidencia compuestas por diferentes tipos de selectores CSS se aplicará. Si varias tienen 
+                    igualdad de especificidad se aplicará la última declaración encontrada en el CSS. El <b>orden</b> 
+                    es el siguiente:
+                </p>
+                <ol>
+                    <li>Selector de tipo (p, div, h1...).</li>
+                    <li id="example_id">Selector de classe (.orange, .green...).</li>
+                    <li class="example_class">Selector de id (#title...).</li>
+                    <li>Estilos en línea</li>
+                </ol>
+                <p>
+                    <b>!important</b> (exclamación(!) + important) <b>sobreescribe cualquer declaración de estilos</b>. 
+                    No tiene relación con la especificidad pero influirá/interactuará directamente con esta. Su uso 
+                    debe ser limitado a sobreescribir estilos de librerías externas. <b>NO USAR POR EL MOMENTO</b>
+                </p>
+
+                <div id="Especificidad Ejemplos">
+                    <h3>Ejemplos de Especificidad</h3>
+                    <p>
+                        Algunos ejemplos de Especifidad utilizando los mismos elementos (h1 y p) varias veces con la 
+                        especificidad de los selectores modificada para que se vea la diferencia. Esta <b>capacidad 
+                        de decisión sobre que estilos utilizar en qué elementos</b> le da el nombre de  "Hoja de Estilos 
+                        en Cascada", pues va aplicado estos <b>desde lo más genério a lo más específico</b>.
+                    </p>
+                    <p>
+                        <b>!important</b> rompe esa cascada. Su uso debe ser muy limitado puesto que hay que  aplicarlo en 
+                        varios elementos para modificar uno solo.
+                    </p>
+                    <ol>
+                        <li><b>Sin selectores (id, class) ni estilos en línea.</b> Aquí se aplicarán los <b>estilos que 
+                            traen por defecto</b> los elementos html.</li>
+                        <li><b>Con selectores class sin estilos en línea</b>. Aquí se aplicarán los <b>estilos que trae 
+                            la class</b> porque tiene mayor especifidad.</li>
+                        <li><b>Con selecores(id, class) sin estilos en línea.</b> Aquí se aplicarán los <b>estilos que 
+                            trae el id</b> porque tiene mayor especificidad.</li>
+                        <li><b>Con selectores (id, class) con estilos en línea.</b> Aquí se aplicarán los <b>estilos 
+                            en línea</b> poruqe tiene mayor especificidad.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div id="box model">
+                <h3>El modelo de caja</h3>      <!-- 8.3 - Modelo de caja -->
+                <p>
+                    Los elementos HTML se comportan como cajas rectangulares al mostrarse en el navegador (Click 
+                    dch + Click en "Inspeccionar"), todo contenido tiene una altura y una anchura. Además, hay que 
+                    tener en cuenta dos factores más: el <b>padding</b>, la <b>distancia entre el contenido y el borde 
+                    del elemento</b> ; y el <b>margin</b>, la <b>distancia entre diferentes elementos</b>.
+                </p>
+                <div id="Ejemplos de box model">
+                    <h4>Ejemplos de box model</h4>
+                    <div id="js-logo">
+                        <img id="js-logo2"
+                            src="https://flyclipart.com/thumb2/javascript-logo-quintagroup-892766.png"
+                            alt="logo de javascript"
+                        />
+                        <p>Hola, soy el pie de foto</p>
+                    </div>
+                    <div id="html-logo">
+                        <img id="html-logo2"
+                            src="https://i.pinimg.com/originals/a2/7d/14/a27d14a27b5ef7d35c241d5cc9c1deb4.png"
+                            alt="logo de html"
+                        />
+                        <p>Hola, soy el pie de foto</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="flexbox">
+                <h3>Flexbox</h3>      <!-- 8.4 - Flexbox -->
+                <p>
+                    <b>Módulo entero</b> que otorga <b>ciertas características</b> de comportamiento a los elementos 
+                    que lo implementan. Permite la <b>ubicación de elementos internos de un contenedor</b> (Ej.: div) 
+                    <b>de forma dinámica</b>, alterando su posición con respecto a su comportamiento (en bloque vs en
+                    línea) y su propio lugar en el contenedor.
+                </p>
+                <div id="flexbox_box_elements">
+                    <h4>Elementos de bloque con Flexbox (8.4.1)</h4>
+                    <p>
+                        Si un div es un bloque que ocupa todo el ancho de una página, y debajo hay otro div con la 
+                        mísma característica (y así sucesivamente), usando <b>display:flexbox</b> en un <b>contenedor 
+                        padre</b> (Ej.: div) con elementos tipo block (Ej.: 3 "p") podríamos hacer que dejaran de estar uno encima 
+                        del otra para ocupar el espacio contiguo. Veamos el ejemplo a continuación:
+                    </p>
+                    <div id="without-flexbox">
+                        <p><b>Without flexbox:</b></p>
+                        <p>Mismo texto</p>
+                        <p>En los dos</p>
+                        <p>Contenedores padre</p>
+                    </div>
+                    <div id="with-flexbox">
+                        <p><b>With flexbox:</b></p>
+                        <p>Mismo texto</p>
+                        <p>En los dos</p>
+                        <p>Contenedores padre</p>
+                    </div>
+                  
+                </div>
+                <div class="flexbox_flex_direction">
+                    <h4>Dar dirección a los elementos (8.4.2)</h4>      <!-- 8.5 -->
+                    <p>
+                        Darles dirección a los elementos de dentro de un contenedor padre. En este caso, <b>flex-
+                        direction-column</b> tiene el mismo comportamiento que si no usáramos ni <b>display:flex</b> 
+                        ni <b>flex-direction:column</b>. Es para que veais que también se puede dar dirección a los 
+                        elementos (comentar la línea de <b>flex-direction-column</b> para comprobarlo).
+                    </p>
+
+                </div>
+                <div class="flexbox_justify_content">
+                    <h4>Justificar el contenido (8.4.3)</h4>       <!-- 8.6 -->
+                    <p>
+                        En este caso, se centran los elementos hijos del contenedor padre en su eje horizontal 
+                        mediante <b>display:flex</b> y apliando <b>justify-content:center</b>.
+                    </p>
+                </div>
+                <div class="flexbox_align_items">
+                    <h4>Alinear elementos (8.4.4)</h4>     <!-- 8.7 -->
+                    <p>
+                        Centrandolos en su eje vertical, con 500px de height(altura) para que ocupe todo el ancho de 
+                        la pantalla y después utilizar la propiedad <b>align-items:center</b>
+                    </p>
+                </div>
+
+                <div id="flex-dir-justify-content-align-item">
+                    <p>
+                        <b>Ejemplos</b> de dar <b>dirección a los elementos</b> (<em>flex-direction:column</em>) y de 
+                        <b>justificar</b> (<em>justify-content:center</em>) y <b>alinear el contenido</b> (<em>align-
+                        items</em>).
+                    </p>
+                    <p>
+                        <b>display</b>: <em>flex</em> + <b>flex-direction</b>: <em>column</em> + <b>justify-content</b>: 
+                        <em>center</em> + <b>align-items</b>: <em>center</em> + height: ?px; width: 100%; border-style: double;
+                    </p>
+                    <p>Mismo texto</p>
+                    <p>En los dos</p>
+                    <p>Contenedores padre</p>
+                </div>
+
+                <p>
+                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Guía completa de Flexbox</a> en
+                    la que explican de forma gráfica los diferentes atributos que flexbox maneja. <br>
+                    <a href="https://flexboxfroggy.com/#es">Flexbox con Froggy</a> es un juego práctico que ayuda a 
+                    entender flexbox.
+                </p>
+            </div>
+
+            <div class="css3_propiedades">
+                <h3>Principales propiedades de CSS3</h3>
+                <p>
+                    Esta es una <a href="https://w3schools.com/cssref">lista de propiedades</a> que más se utilizarán 
+                    a lo largo del bootcamp. Puede que según avances utilices cosas que no hayas visto hasta ahora 
+                    para proyectos personales/grupales/empresariales, lo que quiere decir que estás avanzando. En 
+                    <a href="https://w3schools.com/cssref">esta lista</a> podeis clickar en cada una de las 
+                    propiedades para saber que atributos o valores aceptan. Hay muchas, así que con calma. Ahora 
+                    veremos <b>algunos elementos en acción</b> de forma más específica.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+    <div>
+
+        <div id="java-script">
+            <h2 id="titulo-java-script">Java Script (JS)</h2>
+        </div>
+        <p>
+            JavaScript (que no Java) es <b>el lenguaje de programación que (mayoritariamente) da funcionalidad 
+            a una página web</b>. Es el músculo detrás de las webs. Mientras un boton se hace con HTML y CSS da 
+            la apariencia (color, tipo de letra, bordes...), es JS el que 
+            
+            da dinamismo a la página web, modifi
+            cando, incluyendo y eliminando elementos; ejecutando acciones cuando suceden cierta acciones (valga 
+            la redundancia)
+            
+            hace que se ejecuten las acciones, 
+            cambios y modificaciones dinámicas, <b>que sucedan cosas</b> en los elementos HTML y/o estilos CSS 
+            al ejercutar alguna acción como que cuando el usuario haga <b>click en un botón</b> dé una orden para 
+            que, por ejemplo, pueda logearse en una página web o cualquier otra acción.
+        </p>
+        <p>
+            Hasta ahora hemos visto cómo se declaran variables, bucles y condicionales, operadores lógicos y 
+            ternarios, arrays y sus métodos y strings y sus métodos.  Hemos recogido valores por prompt y los 
+            hemos transformado (o no) a números. Hemos usado console.log para mostrar los resultados de 
+            nuestro código en la consola del navegador, y hemos puesto todo nuestro código Javascript entre 
+            dos etiquetas "script" dentro de archivo HTML.
+        </p>
+        <h3>¿Qué veremos ahora?</h3>
+        <ul>
+            <li>
+                Los objetos, que en js son "variables" algo más complejas con determinada organización interna. 
+                Navegaremos por ellas para llegar al valor que queremos conseguir.
+            </li>
+            <li>
+                Manipular el DOM con js, cambiando elementos de la pagina web de manera dinámica conforme van 
+                cierta acciones.
+            </li>
+            <li>
+                Pondremos el códgio de JS en su porpio archivo, uniéndolo al HTML de forma similar como se hace 
+                con un archivo de CSS.
+            </li>
+        </ul>
+        <div id="js-objetos">
+            <div class="subtitulo">
+                <h2>Objetos en JavaScript</h2>
+            </div>
+            <div>
+                <p>
+                    <b>La Programación Orientada a Objetos es un tipo de programación en el que se toman elementos 
+                    del mundo real (objetos) y se utilizan de ellos aquellas partes o atributos que necesitamos 
+                    para que nuestro programa funcione</b>. Ejemplo.: si  tengo un programa para pintar fuselajes 
+                    de avión, no me es relevante el tipo de motor, material de las ventanillas ni la compañia. Lo 
+                    que me interesa, lo que me influye, es la marca y el modelo para tener en cuenta su medidas y 
+                    capacidades de carga. Todo eso para poder calcular cuánta pintura necesitaré para ese avión.
+                    <br>
+                    Del mismo modo, nosotros, las personas, tambien podemos ser objetos. Tenemos unas propiedades 
+                    (Nombre, apellidos, DNI, número de la SS, etc) con un valor asociado. <b> Lo objetos son 
+                    variables agrupadas dentro de una sola variable</b>. Veamos un ejemplo:
+                </p>
+                <p>
+                    Pero antes comentar que esta vez, a diferencia de las anteriores de iniciación, el codigo de js 
+                    estará en un archivo.js y será integrado al archivo.html de forma similar a como se hace con css, 
+                    solo que en la primera línea del body -> <b>script</b> type="<b>text/js</b>" src="<b>direccion-ar
+                    chivo.js</b>"
+                </p>
+            </div>
+        </div>
+
+        <div id="js-dom">
+            <div class="dom">
+                <h2>Manipulando el DOM con JS</h2>
+            </div>
+            <p>
+
+            </p>
+            <div>
+                <div>
+                    <h3>Las Diferentes Formas de Referenciar Elementos del HTML desde JS</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+</body>

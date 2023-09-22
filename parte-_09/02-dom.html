@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="02-dom.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Ahora veremos en detalle como js da dinamismo a una web modificando, incluyendo 
+        y eliminando elementos así como ejecutando acciones precedidas de otras acciones.
+        <br>
+        Antes de nada, necesitamos saber que desde js podremos referenciar cualquier 
+        elemento de nuestro HTML, para lo que existen varias formas.
+    </p>
+    <div id="referenciar-elementos-html">
+        <div class="explicacion">
+            <ul><li><b>document.get.ElementById('idElemento')</b>:</li></ul>
+            <p>
+                <b>document</b> hace referencia a la pag-web completa, todo el HTML 
+                escrito, las etiquetas <b>head</b>, <b>body</b> y el resto se incluyen.
+                La instrucción <b>getElementById('IdElemento')</b> coge un elemento que 
+                tenga el id igual que el que le pasamos entre paréntesis. Algo así como 
+                "ey, recorre el documento y coge aquel elemento cuyo id coincida con el 
+                <b>'IdElemento'</b>". Esta instrucción <b>genera un objeto a raíz del 
+                'idElemento'</b>.
+            </p>
+            <ul><li><b>document.getElementByTagName('nombreElemento')</b>:</li></ul>
+            <p>
+                Coge todos los elementos que compartan el <b>'nombreElemento'</b> (p, a, 
+                h1, div...). A diferencia de la instrucción previa, esta en vez de generar 
+                un objeto, <b>genera una lista de objetos recogidos</b> del HTML. La forma 
+                de tratar con ella será ligeramente diferente a la anterior.
+            </p>
+            <ul><li><b>document.getElementsByClassname('classElementos')</b>:</li></ul>
+            <p>
+                Misma función que el anterior. Recorre el documento HTML y recupera <b>todos 
+                los elementos</b> con el <b>mismo classname en su atributo class</b>. También 
+                devolverá una lista de elementos HTML.
+            </p>
+            <ul><li><b>document.querySelector('textoLibre')</b>:</li></ul>
+            <p>
+                Como en la primera forma, referencia elementos HTML por su id. Al igual que 
+                todos los anteriores, nos permite decirle que nos busque por class o por el 
+                propio elemento, lo único que con una particularidad que si seleccionamos por 
+                id hay que poner '#' delante del nombre, y si es por class '.' (para el 
+                elemento con el tipo bastará). <b>Si se usa para coger más de una referencia
+                </b> (>1 elemento o >1 classname) <b>coge la primera coincidencia</b> y no 
+                hará una lista como los dos previos.
+            </p>
+            <ul><li><b>document.querySelectorAll('textoLibre')</b>:</li></ul>
+            <p>
+                Nos ayuda a <b>recoger todos los elementos de un mismo tipo(class, elemento)
+                </b>, pudiendo usarlo indistintamente por lo que no se necesita tener otros 
+                dos métodos para recoger varios elementos presentes.
+            </p>
+            <p>
+                Revisar el <b><em>11_ejemplo_referencia_elemento_html</em></b> y js para ver 
+                y comprobar sus distintas funcionalidades. En la consola y con los comentarios 
+                se entenderá bien.
+            </p>
+        </div>
+        <div id="referenciar-elementos-ejemplo">
+            <h3 id="title">ESTO ES UN EJEMPLO (Consola)</h3>
+            <p class="paragraph">Un párrafo</p>
+            <p class="paragraph">Otro párrafo</p>
+            <p class="paragraph">Un tercero</p>        
+        </div>
+    </div>
+
+    <div id="manipular-elementos">
+        <div>
+            <p>
+                Ahora, cogiendo el html del ejemplo anterior, añadiremos algunas cosas. 
+            </p>
+            <ul>
+                <li>Primero <b>modificar el texto</b> que hay dentro del elemento <b>h1</b>, 
+                para lo que se necesita la propiedad <b>innerHTML</b> del elemento en 
+                cuestión.</li>
+                <li>Tras seleccionar el elemento h1 y <b>acceder</b> a lo que tiene entre las 
+                etiquetas de apertura y cierre <b>con un document.querySelector('#title')
+                .innerHTML</b> hay que <b>darle un nuevo valor (x) para sobrescribir</b> lo 
+                que había anteriormente(h1).</li><br>
+
+                <b>Si en vez de sobrescribir quisiera añadir algo</b>, en vez de igualarlo habría 
+                que utilizar los símbolos '<b>+=</b>'. En el ejemplo se ve claro. <br><br>
+                
+                <li>Ahora/por último vamos a acceder a las propiedades de CSS de ese elemento 
+                html con <b>document.querySelector('#title').style.<em>propiedadActual = nuev
+                oValor</em>.</b> En este caso cambiamos el color del texto a azul.</li>
+            </ul> 
+        </div>
+
+        <div id="manipular-elementos-ejemplo">
+            <h3 id="title">ESTO ES OTRO EJEMPLO (Elements)</h3>
+            <img />
+            <a></a>
+    </div>
+
+    <div id="innerHTML">        <!-- 9.13 - Ejemplo innerHTML-->
+        <div><h3>innerHTML</h3></div>
+        <p>
+            Con <b>innerHTML</b> escribiremos los elementos que querramos introducir entre 
+            comillas francesas(en el teclado al lado de la p -> `) para el día de mañana 
+            utilizar variables en esos nuevos elementos HTML que crearemos. <br>
+            En el ejemplo, introduciremos en la etiqueta body un nuevo div que contiene un 
+            h1 y una p, además de un id en cada elemento para ver como se puede escribir de 
+            la misma forma que de si en el mismo archivo html se tratara. <br><br>
+            El ejemplo se mantendrá al final de la página (h1(Título) + p(Soy un párrafo))
+        </p>
+    </div>
+
+    <div id="innerHTML-bucle-for">        <!-- 9.14 - Ejemplo innerHTML usando un bucle FOR-->
+        <div><h3>innerHTML + bucle-for</h3></div>
+        <p>
+            A continuación rellenaremos un <b>div</b> con 4 <b>p</b>, cada una con el mensaje 
+            "Soy el parrafo x", mediante un bucle for.
+        </p>
+    </div>
+
+    <div id="innerHTML-persona">        <!-- 9.15 - Ejercicio innerHTML-personas -->
+        
+
+    </div>
+
+    <div id="innerHTML-planetas">        <!-- 9.16 - Ejercicio innerHTML-planetas -->
+
+    </div>
+
+    <script type="text/javascript" src="02-dom-script.js"></script>
+</body>
+</html>
